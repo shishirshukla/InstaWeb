@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div id="login" class="twosidepage">
+    <div class="leftbg"></div>
+    <div class="rightbg"></div>
+    <div class="leftside">
+        <div class="innerwrp">
+            <form action="/home/login" method="POST" autocomplete="off">
+                <input type="hidden" name="action" value="login">
+
+
+                <div class="fancy-field mb-20">
+                    <input class="input"
+                           id="username"
+                           name="username"
+                           type="text"
+                           value="">
+                    <label for="username">Email address</label>
+                </div>
+                <div class="fancy-field mb-10">
+                    <input class="input"
+                           id="password"
+                           name="password"
+                           type="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="sub mb-20 clearfix">
+                    <label>
+                        <input class="checkbox" type="checkbox" name="remember" value="1">
+                        <div>
+                            <span class="icon unchecked mdi mdi-checkbox-blank-outline"></span>
+                            <span class="icon checked mdi mdi-checkbox-marked"></span>
+                            Remember me
+                        </div>
+                    </label>
+                    <a href="recovery.html">Forgot your password?</a>
+                </div>
+                <div>
+                    <input type="submit" class="fluid button button--oval" value="Sign in">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="rightside">
+        <div class="innerwrp">
+            <h2 class="section-title">Sign up</h2>
+            <p class="subinfo">It’s absolutely free and takes less than 30 seconds.</p>
+            <a class="button button--oval button--outline" href="signup.html">Sign up</a>
+        </div>
+    </div>
+</div>
